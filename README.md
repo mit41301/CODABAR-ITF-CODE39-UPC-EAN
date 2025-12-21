@@ -6,19 +6,15 @@ Choose the appropriate DOS or WINDOWS file for GW-BASIC or QBASIC.
 
 Tested on WINDOWS 10 and WINDOWS 11 using QB64 compiler. Output verified using smartphone apps using Android and iOS.
 
-PS: The CODE 3OF9 accepts only uppercase letters. There is an feature which automatically enables the CAPS LOCK before entering the user strings. While leaving the program the CAPS LOCK left to previous state before invoking this program. It was achived by the following lines in the CODE3OF9 source code
+**PS:** The **CODE 3OF9** accepts only uppercase letters. There is an feature which automatically enables the **CAPS LOCK** before entering the user strings. While leaving the program the CAPS LOCK left to previous state before invoking this program. It was achived by the following lines in the **CODE3OF9** source code
 
-140 Def Seg = &H40
+140 Def Seg = &H40  
+150 K% = Peek(&H17)  
+and  
+410 Poke &H17, K%  
+420 Def Seg  
 
-150 K% = Peek(&H17)
-
-and 
-
-410 Poke &H17, K%
-
-420 Def Seg
-
-But this feature is not working with QB64
+But this feature is **not working** with **QB64** 
 
 # TEST RESULTS 
 ## UPC/EAN DOS BARCODE GW-BASIC
