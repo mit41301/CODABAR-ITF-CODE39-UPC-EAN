@@ -38,4 +38,3 @@
 380                     KEY ON: SCREEN 0
 390                     END
 400     DATA    r,?,f,4,l,2,B,1,\,",",N,&,P,#,D,*,H,),t,%
-
