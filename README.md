@@ -4,7 +4,7 @@ To RUN the UPC/EAN program in GW-BASIC or in QBASIC. You're prompted to enter 12
 
 Choose the appropriate DOS or WINDOWS file for GW-BASIC or QBASIC. 
 
-Tested on WINDOWS 10 and WINDOWS 11 using QB64 compiler. Output verified using smartphone apps using Android and iOS.
+Tested on WINDOWS 10 and WINDOWS 11 using QB64 compiler. Output verified using smartphone apps using Android and iOS. The programs were tested and verified with DOSBox. DOSBox requires few changes in the source BASIC file compared to QB64. So the code are kept different for QB64 and DOSBox. But DOSBox code will run on bothe DOSBox as well as QB64.  
 
 **PS:** The **CODE 3OF9** accepts only uppercase letters. There is an feature which automatically enables the **CAPS LOCK** before entering the user strings. While leaving the program the CAPS LOCK left to previous state before invoking this program. It was achived by the following lines in the **CODE3OF9** source code
 
@@ -14,7 +14,9 @@ and
 410 Poke &H17, K%  
 420 Def Seg  
 
+This feature is working well with **DOSBox**  
 But this feature is **not working** with **QB64** 
+
 
 # TEST RESULTS 
 ## UPC/EAN DOS BARCODE GW-BASIC
