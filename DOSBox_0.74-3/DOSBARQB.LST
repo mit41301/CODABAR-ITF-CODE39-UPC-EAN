@@ -1,0 +1,58 @@
+                                                                      PAGE   1
+                                                                      29 Dec 25
+                                                                      11:47:50
+Offset  Data    Source Line      Microsoft (R) QuickBASIC Compiler Version 4.50
+
+ 0030   0006    10                      DIM p$(29), c%(12), q$(9), m%(100)
+ 0030   0006    20                      INPUT "    Enter the Number : "; u$
+ 0055   018E    30      FOR i% = 0 TO 9
+ 0060   018E    40                      READ n$, s$
+ 0060   018E    50                      n% = ASC(n$)
+ 007A   0196    60                      s% = ASC(s$) XOR &H3F
+ 0086   0198    70      WHILE n% <> 0
+ 0096   019A    80              p$(i%) = RIGHT$(STR$(n% MOD 2), 1) + p$(i%)
+ 00A0   019A    90              p$(i% + 10) = RIGHT$(STR$(n% MOD 2 XOR 1), 1) +
+                 p$(i% + 10)
+ 00D7   019C    100             p$(i% + 20) = p$(i% + 20) + LEFT$(p$(i%), 1)
+ 0111   019C    110             q$(i%) = RIGHT$(STR$(s% MOD 2 + 1), 1) + q$(i%)
+ 0141   019C    120                     n% = n% \ 2
+ 0179   019C    130                     s% = s% \ 2
+ 0185   019C    140     WEND
+ 0194   019C    150     NEXT i%
+ 01A3   019C    160     FOR i% = 0 TO 11
+ 01A8   019C    170             c%(i%) = VAL(MID$(u$, i% + 1, 1))
+ 01A8   019C    180             X% = X% + c%(i%) * (((i% + 1) MOD 2) + (3 * (i%
+                 MOD 2)))
+ 01D4   019C    190     NEXT i%
+ 0209   019E    200                     c%(i%) = (10 - X% MOD 10) MOD 10
+ 0209   019E    210     FOR i% = 1 TO 6
+ 022C   019E    220             l$ = l$ + p$(VAL(MID$(q$(c%(0)), i% + 1, 1)) * 
+                10 + c%(i%))
+ 022C   019E    230             r$ = r$ + p$(c%(i% + 6))
+ 028B   01A2    240     NEXT i%
+ 02C0   01A6    250                     f$ = "606" + l$ + "06060" + r$ + "606"
+ 02C0   01A6    260             KEY OFF: SCREEN 2
+ 02F5   01AA    270             PRINT LEFT$(u$, 12) + RIGHT$(STR$(c%(12)), 1)
+ 030B   01AA    280                     GET (0, 0)-(13 * 8, 8), m%
+ 0338   01AA    290                     SCREEN 11: CLS
+ 035F   01AA    300                             REM PAINT (0, 0)
+ 0379   01AA    310                             PUT (15, 35), m%
+ 0379   01AA    320     FOR i% = 1 TO 95
+ 03A2   01AA    330             b% = VAL(MID$(f$, i%, 1))
+ 03A2   01AA    340             LINE (20 + i%, 5)-(20 + i%, 25 + b%), SGN(b%) X
+                OR 0
+ 03C6   01AC    350     NEXT i%
+ 0414   01AC    360             WHILE INKEY$ = ""
+ 0414   01AC    370             WEND
+ 042A   01AC    380                     KEY ON: SCREEN 0
+ 042A   01AC    390                     END
+ 0443   01AC    400     DATA    r,?,f,4,l,2,B,1,\,",",N,&,P,#,D,*,H,),t,%
+ 0449   01AC    
+ 0449   01AC    
+ 044E   01AC    
+
+44013 Bytes Available
+42577 Bytes Free
+
+    0 Warning Error(s)
+    0 Severe  Error(s)
