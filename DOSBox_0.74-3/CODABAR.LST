@@ -1,0 +1,51 @@
+                                                                      PAGE   1
+                                                                      29 Dec 25
+                                                                      09:48:13
+Offset  Data    Source Line      Microsoft (R) QuickBASIC Compiler Version 4.50
+
+ 0030   0006    DIM P$(20), A$(20), G%(999)
+ 0030   0006    FOR I = 1 TO 20
+ 0038   087E        READ X$
+ 0038   087E        A$(I) = LEFT$(X$, 1)
+ 0038   087E        X% = VAL("&H" + RIGHT$(X$, LEN(X$) - 1))
+ 0038   087E        FOR N% = 1 TO 7
+ 00A0   0888            P$(I) = RIGHT$(STR$(X% MOD 2), 1) + P$(I)
+ 00A0   0888            X% = X% \ 2
+ 00A0   0888        NEXT N%
+ 0103   088A    NEXT I
+ 012A   088A    INPUT " Enter The Number : "; U$
+ 014F   088E    U$ = "A" + U$ + "B"
+ 014F   088E    FOR I = 1 TO LEN(U$)
+ 0192   0892        FOR J = 1 TO 20
+ 019A   0892            IF A$(J) = MID$(U$, I, 1) THEN F$ = F$ + P$(J) + "0"
+ 0200   089A        NEXT J
+ 0227   089A    NEXT I
+ 024E   089A    SCREEN 2
+ 024E   089A    PRINT U$
+ 024E   089A    GET (0, 0)-(8 * LEN(U$), 14), G%(LEN(U$) * 8)
+ 024E   089A    PUT (0, 0), G%(LEN(U$) * 8), XOR
+ 024E   089A    PAINT (0, 0)
+ 02DC   089A    FOR X = 1 TO LEN(F$)
+ 030C   089E        S = S + 2 * VAL(MID$(F$, X, 1))
+ 030C   089E    NEXT X
+ 0367   08A6    Z = 320 - .5 * (LEN(F$) + S)
+ 0367   08A6    FOR I = 1 TO LEN(F$)
+ 03AC   08AE        FOR J = 0 TO 2 * VAL(MID$(F$, I, 1))
+ 03E4   08B2            LINE (Z, 5)-(Z, 25), I MOD 2 XOR 1
+ 03E4   08B2            Z = Z + 1
+ 03E4   08B2        NEXT J
+ 0470   08B2    NEXT I
+ 0497   08B2    PUT ((320 - LEN(U$) * 4), 30), G%(LEN(U$) * 8)
+ 0497   08B2    SLEEP
+ 0497   08B2    END ' codabar printer program.
+ 0497   08B2    DATA 03,16,29,360,412,542,621,724,830,948
+ 04EB   08B2    DATA -c,$18,":45",/51,.54,+1f,A1a,Bb,C29,De
+ 04EC   08B2    
+ 04EC   08B2    
+ 04F1   08B2    
+
+44029 Bytes Available
+42523 Bytes Free
+
+    0 Warning Error(s)
+    0 Severe  Error(s)
