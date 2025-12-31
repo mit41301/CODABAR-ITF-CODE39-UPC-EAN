@@ -21,11 +21,11 @@ But this feature is **not working** with **QB64**
 # TEST RESULTS 
 ## UPC/EAN DOS BARCODE GW-BASIC
 ![DOSBAR-GW](https://github.com/user-attachments/assets/8aeccd82-bef6-4c1f-bf7f-2cb9745c2318)
-![DOSBAR-GW_scan](https://github.com/user-attachments/assets/a28a711d-7e34-452a-9443-bdf560a9bd57)
+![EAN-13_DOS](https://github.com/user-attachments/assets/d1b02fab-4e07-4800-a207-2a0130e91f4a)
 
 ## UPC/EAN WIN BARCODE QB
 ![WINBAR-QB](https://github.com/user-attachments/assets/6f5570a5-3379-423b-9543-ce0b6ca64201)
-![WINBAR-QB_scan](https://github.com/user-attachments/assets/0c390b8c-dcb5-42c5-aace-ace77d720800)
+![EAN-13_WIN](https://github.com/user-attachments/assets/ac98774e-8286-4f78-85de-45fb098829fd)
 
 ## CODE3OF9
 ![CODE39](https://github.com/user-attachments/assets/3d510817-96df-44a1-8ed2-fb85f02ad478)
